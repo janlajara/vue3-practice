@@ -12,15 +12,21 @@
 
 
 <script>
+import {watch, ref} from 'vue'
 import {useRoute} from 'vue-router'
 
 export default {
     name: 'Breadcrumbs',
     setup() {
         const route = useRoute()
+        let breadcrumbs = ref([])
+
+        watch(()=> route.name,
+            () => {breadcrumbs.value = route.matched}
+        )
 
         return {
-            breadcrumbs : route.matched
+            breadcrumbs
         }
     }
 }

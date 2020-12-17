@@ -14,11 +14,20 @@ const routes = [
     children: [{
       path: 'breadcrumb',
       name: 'Breadcrumb Example',
-      component: () => import('../views/contents/exercises/BreadcrumbExample.vue'),
+      component:  () => import('../views/contents/exercises/BreadcrumbExample.vue'),
+      children: [
+        {path: '1', name: '1', component: Passthrough},
+        {path: '2', name: '2', component: Passthrough},
+        {path: '3', name: '3', component: Passthrough},
+      ]
     }, {
       path: 'input-form',
       name: 'Input Form Example',
       component: () => import('../views/contents/exercises/InputFormExample.vue')
+    }, {
+      path: 'modal',
+      name: 'Modal Example',
+      component: () => import('../views/contents/exercises/ModalExample.vue')
     }]
   }
 ]
