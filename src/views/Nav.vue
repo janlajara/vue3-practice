@@ -21,7 +21,7 @@ export default {
     components: {SubNav},
     setup(){
         const router = useRouter()
-        let routes = router.options.routes.map((route)=> {
+        const routes = router.options.routes.map((route)=> {
             let hasSubMenu = (route.meta)? route.meta.hasSubMenu : false
             return {
                 name: route.name,
@@ -29,7 +29,6 @@ export default {
                 hasSubMenu
             }
         })
-        console.log(routes)
         return {
             routes
         }
