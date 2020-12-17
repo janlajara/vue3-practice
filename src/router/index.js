@@ -15,6 +15,10 @@ const routes = [
       path: 'breadcrumb',
       name: 'Breadcrumb Example',
       component: () => import('../views/contents/exercises/BreadcrumbExample.vue'),
+    }, {
+      path: 'input-form',
+      name: 'Input Form Example',
+      component: () => import('../views/contents/exercises/InputFormExample.vue')
     }]
   }
 ]
