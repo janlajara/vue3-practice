@@ -79,7 +79,8 @@ export default {
 
         watch(()=> selectedCountry.value,
             async (country) => {
-                countryDetail.value = await getCountryDetailsByName(country)
+                if (country)
+                    countryDetail.value = await getCountryDetailsByName(country)
             }
         )      
 
