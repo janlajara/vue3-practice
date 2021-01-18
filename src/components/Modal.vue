@@ -7,7 +7,7 @@
                     <slot/><br/>
                     <button @click="isOpen = false">Close</button>
                     <slot name="buttons" :close="()=>{isOpen = false}"></slot>
-                </div>>
+                </div>
             </div>
         </transition>
     </teleport>
